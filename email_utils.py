@@ -15,8 +15,8 @@ def send_task_email(user_email, df_tasks):
     :param user_email: Recipient's email (from login/registration)
     :param df_tasks: Pandas DataFrame of tasks
     """
-    sender_email = os.getenv("EDUNET_EMAIL")
-    sender_password = os.getenv("EDUNET_EMAIL_PASSWORD")
+    sender_email =st.secrets("EDUNET_EMAIL")
+    sender_password =st.secrets("EDUNET_EMAIL_PASSWORD")
 
 
     if not sender_email or not sender_password:
